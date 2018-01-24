@@ -1,0 +1,1 @@
+Minimal prime is 2

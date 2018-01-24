@@ -11,33 +11,7 @@ namespace _2
     {
         static void Main(string[] args)
         {
-            string readPath = @"C:\Users\1\Desktop\AE\PP2\C#\week 02\2\2\input.txt";
-            string writePath = @"C:\Users\1\Desktop\AE\PP2\C#\week 02\2\2\output.txt";
-
-            /*try
-            {
-                Console.WriteLine("READ FILE");
-                using (StreamReader sr = new StreamReader(readPath))
-                {
-                    Console.WriteLine(sr.ReadToEnd());
-                }
-                Console.WriteLine();
-                Console.WriteLine("READ STRING");
-                using (StreamReader sr = new StreamReader(readPath, System.Text.Encoding.Default))
-                {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line);
-                    }
-                }
-            }
-            finally
-            {
-
-            }
-            */
-            
+            string readPath = @"C:\Users\1\Desktop\Асхат\AE\PP2\C#\week 02\lab2\2\2\input.txt";
             string text = "";
             try
             {
@@ -45,17 +19,21 @@ namespace _2
                 {
                     text = sr.ReadToEnd();
                 }
-                using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                string[] arr = text.Split(' ');
+                int mi = int.Parse(arr[0]), ma = int.Parse(arr[0]);
+                for (int i = 1; i < arr.Length; i++)
                 {
-                    sw.WriteLine(text);
+                    if (int.Parse(arr[i]) < mi)
+                    {
+                        mi = int.Parse(arr[i]);
+                    }
+                    if (int.Parse(arr[i]) > ma)
+                    {
+                        ma = int.Parse(arr[i]);
+                    }
                 }
 
-                /*using (StreamWriter sw = new StreamWriter(writePath, true, System.Text.Encoding.Default))
-                {
-                    sw.WriteLine("Дозапись");
-                    sw.Write(4.5);
-                }
-                */
+                Console.WriteLine("max = " + ma + "\nmin = " + mi);
             }
             catch (Exception e)
             {
