@@ -52,7 +52,7 @@ namespace _3
                     }
                 }
                 
-                if (mi != 0)
+                if (ok)
                 {
                     for (int i = 0; i < text.Length; i++)
                     {
