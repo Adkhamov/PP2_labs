@@ -1,9 +1,8 @@
 ﻿using System;
 [Serializable]
-class Complex
+public class Complex
 {
     public int a, b;
-    public double volue;
 
     public Complex() { }
 
@@ -11,14 +10,11 @@ class Complex
     {
         a = _a;
         b = _b;
-        double ad = a, bd = b;
-        if (a != 0 && b !=0)
-        volue = ad / bd;
     }
 
     public override string ToString()
     {
-        return a + "/" + b + "\n volue = " + volue;
+        return a + "/" + b;
     }
 
 
