@@ -48,13 +48,13 @@ namespace _4
             c.Simplify();
             return c;
         }
-
         public static Complex operator *(Complex c1, Complex c2)
         {
             Complex c = new Complex(c1.a * c2.a, c1.b * c2.b);
             c.Simplify();
             return c;
         }
+    }
 
         public static Complex operator /(Complex c1, Complex c2)
         {

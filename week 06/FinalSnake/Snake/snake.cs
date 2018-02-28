@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,24 +6,12 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
-    public class Snake
+    class Snake
     {
         public List<Point> body;
         public string sign;
         public ConsoleColor color;
         public int cnt, body_cnt;
-
-        public Snake(int n)
-        {
-            cnt = 0;
-            body_cnt = 0;
-            sign = "■";
-            body = new List<Point>();
-            body.Add(new Point(10, 10));
-            color = ConsoleColor.Yellow;
-        }
-
         public Snake()
         {
             cnt = 0;
@@ -34,8 +21,6 @@ namespace Snake
             body.Add(new Point(10, 10));
             color = ConsoleColor.Yellow;
         }
-
-
         public void Add()
         {
             body.Add(new Point(0, 0));

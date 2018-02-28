@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
-    public class Food
+    class Food
     {
         public List<Point> body;
         string sign;
         ConsoleColor color;
+        
 
         public Food(int x, int y)
         {
@@ -22,7 +22,7 @@ namespace Snake
             sign = "*";
         }
 
-        public void Draw(int x, int y)
+        public void Drow(int x, int y)
         {
            
             Console.SetCursorPosition(x, y);

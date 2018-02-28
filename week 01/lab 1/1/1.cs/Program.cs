@@ -12,11 +12,13 @@ namespace _1.cs
 
     class Program
     {
-        static void Main(string args)
+        static void Main(string[] args)
         {
 
-            //string line = Console.ReadLine();       // ввод строки, содержащей числа и пробелы
-            string[] arr = args.Split(' ');         // запись строки в массив без пробелов
+            //string arr = Console.ReadLine();       // ввод строки, содержащей числа и пробелы
+            string[] arr = Console.ReadLine().Split(' ');         // запись строки в массив без пробелов
+            
+            
             for (int i = 0; i < arr.Length; i++)    // пробегаемся по масиву
             {
                 bool ok = true;                     // создаем переменную, отвечающую за простоту числа

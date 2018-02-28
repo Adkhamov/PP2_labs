@@ -13,6 +13,7 @@ namespace Example1
         public int diameter;
         public double circumference;
         string color;
+        public double segment;
 
         public Circle()
         {
@@ -30,6 +31,11 @@ namespace Example1
             findArea();
             findDmt();
             findCir();
+        }
+
+        double FindS(int a)
+        {
+            return (a / 360) * area;
         }
 
         public void findArea()

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
-    public class Point
+    class Point
     {
         public int x, y;
         public Point(int _x, int _y)

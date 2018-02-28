@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake
+namespace snake_example
 {
-    class Class1
+    class Wall
     {
     }
 }

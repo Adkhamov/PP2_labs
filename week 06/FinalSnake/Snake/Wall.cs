@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
-    public class Wall
+    class Wall
     {
         public List<Point> body;
         string sign;
@@ -43,7 +42,7 @@ namespace Snake
         public Wall(int level)
         {
             body = new List<Point>();
-            color = ConsoleColor.White;
+            colors = ConsoleColor.White;
             sign = "■";
             ReadLevel(level);
         }

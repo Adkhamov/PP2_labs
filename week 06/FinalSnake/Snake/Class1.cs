@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
-    public class Wall
+    class Wall
     {
         public List<Point> body;
         string sign;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C10E20AA-5B25-403C-84FA-C22A1037A546}</ProjectGuid>
+    <ProjectGuid>{68816367-AA01-442E-A772-054655861507}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Snake</RootNamespace>
-    <AssemblyName>Snake</AssemblyName>
+    <RootNamespace>forth</RootNamespace>
+    <AssemblyName>forth</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,15 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Food.cs" />
-    <Compile Include="Levels.cs" />
-    <Compile Include="menu.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="snake.cs" />
-    <Compile Include="Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,16 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake
+namespace NewSnake
 {
-    [Serializable]
-    public class Wall
-    {
-        public List<Point> body;
-        string sign;
-        ConsoleColor color;
+    class Wall
+    { 
+        public static int level = 1; 
 
-        public void ReadLevel(int level)
+        public List<Point> body;
+        public string sign = "■";
+        public ConsoleColor color = ConsoleColor.White;
+        
+        public void Draw()
+        {
+            Console.ForegroundColor = color;
+            foreach (Point p in body)
+            {
+                Console.SetCursorPosition(p.X, p.Y);
+                Console.WriteLine(sign);
+            }
+        }
+
+        public void ReadLevel(Wall wall)
         {
             StreamReader sr = new StreamReader("level_" + level + ".txt");
             try
@@ -25,12 +36,15 @@ namespace Snake
                     string s = sr.ReadLine();
                     for (int j = 0; j < s.Length; j++)
                         if (s[j] == '*')
-                            body.Add(new Point(j, i));
+                            wall.body.Add(new Point(j, i));
                 }
 
             }
             catch (Exception e)
             {
+                Console.Clear();
+                Console.WriteLine("WIN!");
+                Console.ReadKey();
                 Console.WriteLine(e.ToString());
             }
             finally
@@ -38,24 +52,6 @@ namespace Snake
                 sr.Close();
             }
 
-        }
-
-        public Wall(int level)
-        {
-            body = new List<Point>();
-            color = ConsoleColor.White;
-            sign = "■";
-            ReadLevel(level);
-        }
-
-        public void Draw()
-        {
-            foreach (Point p in body)
-            {
-                Console.SetCursorPosition(p.x, p.y);
-                Console.ForegroundColor = color;
-                Console.Write(sign);
-            }
         }
     }
 }
