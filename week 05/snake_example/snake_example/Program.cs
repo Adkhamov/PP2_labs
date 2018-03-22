@@ -10,7 +10,7 @@ namespace snake_example
     {
         static void Main(string[] args)
         {
-            int speed = 300;
+            int speed = 100;
             Console.WindowHeight = 40;
             Console.WindowWidth = 70;
             int screenwidth = Console.WindowWidth;
