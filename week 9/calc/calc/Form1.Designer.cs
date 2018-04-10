@@ -69,6 +69,8 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
+            this.ReadStirng = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -484,9 +486,9 @@
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(117, 87);
             this.button31.TabIndex = 53;
-            this.button31.Text = "MS";
+            this.button31.Text = "X^3";
             this.button31.UseVisualStyleBackColor = false;
-            this.button31.Click += new System.EventHandler(this.swap);
+            this.button31.Click += new System.EventHandler(this.operator1);
             // 
             // button32
             // 
@@ -605,12 +607,41 @@
             this.button40.UseVisualStyleBackColor = false;
             this.button40.Click += new System.EventHandler(this.memery);
             // 
+            // ReadStirng
+            // 
+            this.ReadStirng.BackColor = System.Drawing.SystemColors.Window;
+            this.ReadStirng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ReadStirng.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReadStirng.Location = new System.Drawing.Point(10, 830);
+            this.ReadStirng.Name = "ReadStirng";
+            this.ReadStirng.Size = new System.Drawing.Size(361, 87);
+            this.ReadStirng.TabIndex = 59;
+            this.ReadStirng.Text = "ввести выражение";
+            this.ReadStirng.UseVisualStyleBackColor = false;
+            this.ReadStirng.Click += new System.EventHandler(this.ReadString);
+            // 
+            // button41
+            // 
+            this.button41.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.button41.Location = new System.Drawing.Point(377, 830);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(238, 87);
+            this.button41.TabIndex = 61;
+            this.button41.Text = "( )";
+            this.button41.UseVisualStyleBackColor = false;
+            this.button41.Click += new System.EventHandler(this.Brackets);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(624, 842);
+            this.ClientSize = new System.Drawing.Size(624, 929);
+            this.Controls.Add(this.button41);
+            this.Controls.Add(this.ReadStirng);
             this.Controls.Add(this.button36);
             this.Controls.Add(this.button37);
             this.Controls.Add(this.button38);
@@ -652,7 +683,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.MinimumSize = new System.Drawing.Size(650, 913);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(650, 1000);
+            this.MinimumSize = new System.Drawing.Size(650, 1000);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -706,6 +739,8 @@
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button ReadStirng;
+        private System.Windows.Forms.Button button41;
     }
 }
 
