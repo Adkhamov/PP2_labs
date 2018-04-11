@@ -209,10 +209,11 @@ namespace calc
             if (readString)
             {
                 res = stringCalc.Calculate(display.Text);
-                display.Text = res.ToString();
+                //display.Text = result.ToString();
             }
-            else { 
-            Operator = false;
+            else
+            { 
+                Operator = false;
                 if (!firstOperation)
                 {
                     a = double.Parse(display.Text);
@@ -304,6 +305,7 @@ namespace calc
                             break;
                     }
                 }
+                
             }
             if (divideByZero)
             {
@@ -379,6 +381,7 @@ namespace calc
                 display.Text = "0";
                 readString = false;
                 isDouble = false;
+                BracketsOpen = false;
             }
         }
         public bool BracketsOpen = false;
