@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA406125-1500-4AF7-BAD8-AF49A9BDD4EC}</ProjectGuid>
+    <ProjectGuid>{68263A3B-2A74-4D06-B040-C778FAA48A44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>game</RootNamespace>
-    <AssemblyName>game</AssemblyName>
+    <RootNamespace>paintNew</RootNamespace>
+    <AssemblyName>paintNew</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
